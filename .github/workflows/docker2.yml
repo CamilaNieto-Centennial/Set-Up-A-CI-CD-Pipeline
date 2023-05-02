@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1 # may be actions/checkout@v2 now
       - name: Login to DockerHub Registry
-      - with:
+        with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
         run: echo ${{ secrets.DOCKERHUB_TOKEN }} |  docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
